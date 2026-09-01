@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>case template</title>
+    <!-- copy this file -->
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="hover-a">works</a>
+      <a href="" class="name hover-a" id="changer">dia.net</a>
+    </nav>
+    <div class="pictures"></div>
+
+    <!-- <div class="preview">
+      <img src="img/photocollage_1.png" alt="" class="full-img" />
+    </div> -->
+
+    <section class="case-wrapper">
+      <!-- Левая часть: картинка / галерея -->
+      <div class="case-media">
+        <img src="img/photocollage_1.png" alt="" class="case-img" />
+        <img src="img/photocollage_1.png" alt="" class="case-img" />
+
+        <img src="img/photocollage_1.png" alt="" class="case-img" />
+        <img src="img/photocollage_1.png" alt="" class="case-img" />
+
+        <img src="img/photocollage_1.png" alt="" class="case-img" />
+
+        <img src="img/photocollage_1.png" alt="" class="case-img" />
+      </div>
+
+      <!-- Правая часть: фиксированный блок -->
+      <aside class="case-info">
+        <div class="group-top">
+          <h1 class="case-title">Москва–Владивосток</h1>
+
+          <div class="case-tags">
+            <span>motion</span>
+            <span>identity</span>
+            <span>illustration</span>
+            <span>web design</span>
+          </div>
+        </div>
+
+        <p class="case-desc">
+          Это семейный ресторан, потому мы и решили сделать упор на тёплые
+          чувства в концепции и айдентике. Обратились к двум животным на гербах
+          городов: коню в Москве и тигру во Владивостоке. В обычном мире
+          их отношения были мягко говоря абьюзивными, но в нашем брендинге
+          мы сделали их лучшими друзьями.
+          <br />
+          <br />
+          Это семейный ресторан, потому мы и решили сделать упор на тёплые
+          чувства в концепции и айдентике. Обратились к двум животным на гербах
+          городов: коню в Москве и тигру во Владивостоке. В обычном мире
+          их отношения были мягко говоря абьюзивными, но в нашем брендинге
+          мы сделали их лучшими друзьями.
+        </p>
+
+        <div class="group-bottom">
+          <div class="case-client">
+            <p>client</p>
+            <p>HSE</p>
+          </div>
+          <div class="case-year">
+            <p>when</p>
+            <p>октябрь 2025–июнь 2026</p>
+          </div>
+        </div>
+        <div class="switch">
+          <a href="cases/outcene.html">←</a>
+          <a href="work.html">→</a>
+        </div>
+      </aside>
+    </section>
+
+    <style>
+      @font-face {
+        font-family: "CommonSerif";
+        src: url("font/CommonSerif-NewsItalic.ttf");
+        font-weight: 400;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "CommonSerif";
+        src: url("font/CommonSerif-News.ttf");
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        background-color: black;
+        overflow: auto; /* Разрешаем прокрутку */
+        scrollbar-width: none; /* Для Firefox */
+        -ms-overflow-style: none; /* Для IE и Edge */
+        /* font-family: "CommonSerif"; */
+      }
+      body::-webkit-scrollbar {
+        display: none; /* Скрывает полосу в webKit-браузерах */
+      }
+
+      nav {
+        /* padding: 16px;
+        display: flex;
+        justify-content: space-between; */
+
+        display: grid;
+        padding: 16px;
+        column-gap: 8px;
+        row-gap: 64px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      nav a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+      }
+      /* .name {
+        font-size: 64px;
+      } */
+
+      .pictures {
+        margin-top: 100px;
+        display: flex;
+        padding: 0px 16px;
+        max-width: 100%;
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .texts {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        gap: 24px;
+      }
+      h3 {
+        line-height: 1;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0%;
+        color: rgb(40, 40, 40);
+        color: rgb(255, 255, 255);
+      }
+      p {
+        font-size: 14px;
+        color: rgb(175, 175, 175);
+      }
+
+      .preview {
+        background-color: rgba(92, 92, 92, 0.346);
+      }
+
+      /* vibe */
+      .case-wrapper {
+        display: flex;
+        gap: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0px 24px 0px 16px;
+        margin-top: -100px;
+      }
+
+      /* Левая часть — 3/4 */
+      .case-media {
+        width: 75%;
+        padding-bottom: 20px;
+      }
+
+      .case-img {
+        width: 100%;
+        /* border-radius: 12px; */
+        display: block;
+      }
+
+      /* Правая часть — фиксированная 1/4 */
+      .case-info {
+        width: 25%;
+        position: sticky;
+        top: 40px;
+        height: 90dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* Теги */
+      .case-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 12px 0;
+      }
+
+      .case-tags span {
+        background: #eeeeee00;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+      }
+
+      /* Текст */
+      .case-title {
+        font-size: 32px;
+        font-weight: 100;
+        line-height: 1;
+
+        color: white;
+      }
+
+      .case-desc {
+        line-height: 1.4;
+        /* margin-bottom: 20px; */
+        font-size: 14px;
+      }
+      .case-client {
+        display: flex;
+        justify-content: space-between;
+      }
+      .case-year {
+        display: flex;
+        justify-content: space-between;
+      }
+      .group-top {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        color: white;
+      }
+      .group-bottom {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        color: white;
+        /* opacity: 0.6; */
+        text-transform: uppercase;
+      }
+
+      .switch {
+        /* position: fixed;
+        bottom: 0px;
+        width: 100%; */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .switch a {
+        border: 0px solid;
+        mix-blend-mode: overlay;
+        background: rgba(119, 119, 119, 0.25);
+        padding: 12px 16px 16px 16px;
+        color: white;
+        text-decoration: none;
+        border-radius: 100px;
+        line-height: 1;
+      }
+
+      .switch a:nth-of-type(1) {
+        border-radius: 8px 0px 0px 8px;
+      }
+
+      .switch a:nth-of-type(2) {
+        border-radius: 0px 8px 8px 0px;
+      }
+
+      .hover-a {
+        opacity: 1;
+      }
+      .hover-a:hover {
+        color: white;
+
+        opacity: 0.4;
+        /* animation: fading 1s ease-in-out; */
+      }
+    </style>
+    <script>
+      const words = ["dia.net", "dian.et", "diane.t", "dian.et"];
+      let index = 0;
+
+      function changeText() {
+        const currentWord = words[index];
+        document.getElementById("changer").textContent = currentWord;
+        index = (index + 1) % words.length; // Цикличность
+      }
+
+      // Запускаем смену через 1 секунды
+      setTimeout(changeText, 1000);
+      setInterval(changeText, 1000); // Повторяем каждые 1 секунды
+
+      // для проигрывателя на ховер
+      // Получаем элемент и добавляем слушателей
+      // const playerElement = document.getElementById("videoPlayer");
+
+      // // При наведении — включаем автоplay
+      // playerElement.addEventListener("mouseenter", function () {
+      //   this.play();
+      // });
+
+      // // При выходе — выключаем
+      // playerElement.addEventListener("mouseleave", function () {
+      //   this.pause();
+      // });
+    </script>
+  </body>
+</html>

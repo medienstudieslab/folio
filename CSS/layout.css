@@ -1,0 +1,234 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  display: grid;
+  padding: 16px;
+  column-gap: 8px;
+  row-gap: 64px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.texts {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+a {
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: rgb(40, 40, 40);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+p {
+  font-size: 12px;
+  color: rgb(175, 175, 175);
+}
+
+.hover-a {
+  opacity: 1;
+}
+.hover-a:hover {
+  color: white;
+
+  opacity: 0.4;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* фиксированная сетка */
+.grid {
+  padding: 16px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+/* базовая ячейка */
+.cell {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* квадратная пропорция  */
+  background: #111;
+  display: flex;
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center;
+}
+
+/* пустая ячейка */
+.empty {
+  opacity: 0.25;
+}
+
+/* заполненная */
+.filled img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.filled img:hover {
+  opacity: 0.7;
+}
+
+/* большие ячейки (как у него) */
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: 1 / 1;
+}
+
+.video-wrapper {
+  width: 100%;
+  /* height: 100%; */
+  position: relative;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.typewriter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: white;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  text-shadow: #111 0px 2px 4px;
+  padding: 10px 16px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 200;
+}
+
+.textBlock {
+  border: solid 1px rgb(0, 0, 0);
+  background: none;
+  line-height: 1.2;
+  border: white solid 1px;
+  opacity: 0.5;
+}
+.textBlock:hover {
+  opacity: 1;
+}
+
+/* about me */
+
+.about {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  height: 2100px;
+}
+
+.horiz-block {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  padding-bottom: 20px;
+}
+
+/* аккордеон */
+/* Стиль кнопок, которые используются для открытия и закрытия панели аккордеона */
+.accordion {
+  color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* button.accordion:after {
+  content: "\002B";
+  color: #ffffff;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+} */
+
+/* Добавить цвет фона для кнопки, если она нажата (добавить .активный класс с JS), а при наведении на него курсора мыши (наведите курсор) */
+.active,
+.accordion:hover {
+  background-color: #00000000;
+}
+
+/* Стиль аккордеон панели. Примечание: скрыто по умолчанию */
+.panel {
+  padding: 0 18px;
+  /* background-color: white; */
+  display: none;
+  overflow: hidden;
+}
+
+.exp {
+  width: 400px;
+}
+
+.ha1 {
+  font-size: 32px;
+}
+
+.ava {
+  height: 25%;
+  position: fixed;
+  right: 16px;
+  bottom: 30%;
+  transform: translateY(-50%);
+  border-radius: 1000px;
+  z-index: -10;
+}
+
+.hards {
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+}
+
+h1:hover {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.contacts {
+  padding: 16px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
